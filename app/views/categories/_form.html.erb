@@ -11,25 +11,14 @@
     </div>
   <% end %>
 
+	<div class="field">
+    <%= f.label :parent_id %><br />
+		<%= collection_select(:category, :parent_id, @category.valid_parents, :id, :full_name, {:include_blank => true}) %>
+	</div>
+
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :parent_id %><br />
-    <%= f.text_field :parent_id %>
-  </div>
-  <div class="field">
-    <%= f.label :lft %><br />
-    <%= f.text_field :lft %>
-  </div>
-  <div class="field">
-    <%= f.label :rgt %><br />
-    <%= f.text_field :rgt %>
-  </div>
-  <div class="field">
-    <%= f.label :depth %><br />
-    <%= f.text_field :depth %>
   </div>
   <div class="field">
     <%= f.label :html %><br />

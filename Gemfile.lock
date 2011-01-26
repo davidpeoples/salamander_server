@@ -1,3 +1,10 @@
+GIT
+  remote: http://github.com/galetahub/awesome_nested_set.git
+  revision: 6c98d59faf3a9de4dc62ba2e34059189cd4799d4
+  specs:
+    awesome_nested_set (1.5.0)
+      activerecord (>= 3.0.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -87,6 +94,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_nested_set!
   mysql2
   nokogiri
   rails (= 3.0.3)

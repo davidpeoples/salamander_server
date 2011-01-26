@@ -2,3 +2,10 @@
 db/*.sqlite3
 log/*.log
 tmp/**/*
+lib/*
+nbproject/private/*
+public/stylesheets/.gitkeep
+vendor/plugins/*
+Gemfile.lock
+log/development.log
+

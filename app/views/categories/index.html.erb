@@ -15,7 +15,7 @@
 
 <% @categories.each do |category| %>
   <tr>
-    <td><%= category.name %></td>
+    <td><%= raw ("&nbsp;" * ((category.depth || 0) * 2)) %><%= category.name %></td>
     <td><%= category.parent_id %></td>
     <td><%= category.lft %></td>
     <td><%= category.rgt %></td>

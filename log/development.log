@@ -1,0 +1,1184 @@
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2011-01-22 20:46:51 -0600
+
+RuntimeError (!!! Missing the mysql2 gem. Add it to your Gemfile: gem 'mysql2'):
+  
+
+Rendered /home/davidp/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/davidp/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+Rendered /home/davidp/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.7ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2011-01-22 21:06:38 -0600
+  Processing by Rails::InfoController#properties as */*
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+Rendered inline template (0.4ms)
+Completed 200 OK in 48ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-22 21:16:24 -0600
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 31ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index.html" for 127.0.0.1 at 2011-01-22 21:16:43 -0600
+
+ActionController::RoutingError (No route matches "/index.html"):
+  
+
+Rendered /home/davidp/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2011-01-22 21:16:47 -0600
+
+ActionController::RoutingError (No route matches "/index"):
+  
+
+Rendered /home/davidp/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-22 21:16:52 -0600
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (225.6ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (331.1ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateCategories (20110123062252)
+  [1m[35mSQL (136.3ms)[0m  CREATE TABLE `categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `html` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (42.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110123062252')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-23 00:29:05 -0600
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (18.0ms)
+Completed   in 21ms
+
+ActionView::Template::Error (undefined method `to' for #<#<Class:0x000000030ee3b0>:0x000000030de000>):
+    1: <h1>Hello, Rails!</h1>
+    2: <ul>
+    3: 	<li><%= link to "Categories", categories_path %></li>
+    4: </ul>
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb___4191779471633209080_25607960__3110301400581430576'
+
+Rendered /home/davidp/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/davidp/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.3ms)
+Rendered /home/davidp/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-23 00:29:25 -0600
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 00:29:28 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 44ms (Views: 5.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-01-23 00:29:32 -0600
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (9.9ms)
+Rendered categories/new.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 24ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-01-23 00:29:45 -0600
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"name"=>"Bicycles", "html"=>""}, "commit"=>"Create Category"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  describe `categories`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `categories` (`name`, `html`, `created_at`, `updated_at`) VALUES ('Bicycles', '', '2011-01-23 06:29:45', '2011-01-23 06:29:45')[0m
+  [1m[35mSQL (126.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/categories/1
+Completed 302 Found in 159ms
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2011-01-23 00:29:46 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 17ms (Views: 9.8ms | ActiveRecord: 128.1ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 00:29:51 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 16ms (Views: 10.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-01-23 00:29:52 -0600
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (5.5ms)
+Rendered categories/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 17ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-01-23 00:29:58 -0600
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"name"=>"Exercise", "html"=>""}, "commit"=>"Create Category"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  describe `categories`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `categories` (`name`, `html`, `created_at`, `updated_at`) VALUES ('Exercise', '', '2011-01-23 06:29:58', '2011-01-23 06:29:58')[0m
+  [1m[35mSQL (131.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/categories/2
+Completed 302 Found in 174ms
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2011-01-23 00:29:59 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 2) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 16ms (Views: 9.3ms | ActiveRecord: 132.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 00:30:00 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 16ms (Views: 10.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-01-23 00:30:02 -0600
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (33.9ms)
+Rendered categories/new.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 45ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-01-23 00:30:07 -0600
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"name"=>"Clothing", "html"=>""}, "commit"=>"Create Category"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  describe `categories`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `categories` (`name`, `html`, `created_at`, `updated_at`) VALUES ('Clothing', '', '2011-01-23 06:30:07', '2011-01-23 06:30:07')[0m
+  [1m[35mSQL (160.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/categories/3
+Completed 302 Found in 178ms
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2011-01-23 00:30:07 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 3) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 16ms (Views: 9.1ms | ActiveRecord: 160.9ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 00:30:10 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 46ms (Views: 40.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-01-23 00:30:11 -0600
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (5.2ms)
+Rendered categories/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 21ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-01-23 00:30:16 -0600
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"name"=>"Juvenile", "html"=>""}, "commit"=>"Create Category"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  describe `categories`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `categories` (`name`, `html`, `created_at`, `updated_at`) VALUES ('Juvenile', '', '2011-01-23 06:30:16', '2011-01-23 06:30:16')[0m
+  [1m[35mSQL (106.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/categories/4
+Completed 302 Found in 123ms
+
+
+Started GET "/categories/4" for 127.0.0.1 at 2011-01-23 00:30:16 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 4) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 21ms (Views: 10.6ms | ActiveRecord: 107.8ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 00:30:18 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.5ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 18ms (Views: 12.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-01-23 00:30:20 -0600
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (5.3ms)
+Rendered categories/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 17ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-01-23 00:30:28 -0600
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"name"=>"Accessories", "html"=>""}, "commit"=>"Create Category"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  describe `categories`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `categories` (`name`, `html`, `created_at`, `updated_at`) VALUES ('Accessories', '', '2011-01-23 06:30:28', '2011-01-23 06:30:28')[0m
+  [1m[35mSQL (125.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/categories/5
+Completed 302 Found in 172ms
+
+
+Started GET "/categories/5" for 127.0.0.1 at 2011-01-23 00:30:29 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 5) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 17ms (Views: 9.9ms | ActiveRecord: 126.7ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 00:30:30 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 19ms (Views: 13.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-01-23 00:30:31 -0600
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (34.7ms)
+Rendered categories/new.html.erb within layouts/application (37.6ms)
+Completed 200 OK in 46ms (Views: 40.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-01-23 00:30:36 -0600
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"name"=>"Parts", "html"=>""}, "commit"=>"Create Category"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  describe `categories`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `categories` (`name`, `html`, `created_at`, `updated_at`) VALUES ('Parts', '', '2011-01-23 06:30:36', '2011-01-23 06:30:36')[0m
+  [1m[35mSQL (192.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/categories/6
+Completed 302 Found in 206ms
+
+
+Started GET "/categories/6" for 127.0.0.1 at 2011-01-23 00:30:36 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 6) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 17ms (Views: 9.8ms | ActiveRecord: 193.4ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 00:30:38 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 55ms (Views: 49.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-01-23 00:30:45 -0600
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (5.3ms)
+Rendered categories/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 17ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-01-23 00:30:50 -0600
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"name"=>"Service", "html"=>""}, "commit"=>"Create Category"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  describe `categories`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `categories` (`name`, `html`, `created_at`, `updated_at`) VALUES ('Service', '', '2011-01-23 06:30:50', '2011-01-23 06:30:50')[0m
+  [1m[35mSQL (119.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/categories/7
+Completed 302 Found in 134ms
+
+
+Started GET "/categories/7" for 127.0.0.1 at 2011-01-23 00:30:50 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 7) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 16ms (Views: 9.3ms | ActiveRecord: 120.8ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 00:30:52 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 25ms (Views: 14.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/7/edit" for 127.0.0.1 at 2011-01-23 00:30:56 -0600
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 7) LIMIT 1[0m
+Rendered categories/_form.html.erb (6.9ms)
+Rendered categories/edit.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 20ms (Views: 13.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/categories/7" for 127.0.0.1 at 2011-01-23 00:31:01 -0600
+  Processing by CategoriesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"name"=>"Labor", "html"=>""}, "commit"=>"Update Category", "id"=>"7"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 7) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE `categories` SET `name` = 'Labor', `updated_at` = '2011-01-23 06:31:01' WHERE (`categories`.`id` = 7)
+  [1m[36mSQL (97.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/categories/7
+Completed 302 Found in 140ms
+
+
+Started GET "/categories/7" for 127.0.0.1 at 2011-01-23 00:31:01 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 7) LIMIT 1
+Rendered categories/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 17ms (Views: 9.5ms | ActiveRecord: 98.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 00:31:03 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 20ms (Views: 14.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at 2011-01-23 00:31:12 -0600
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+Rendered categories/_form.html.erb (6.9ms)
+Rendered categories/edit.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 48ms (Views: 13.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/categories/1" for 127.0.0.1 at 2011-01-23 00:31:16 -0600
+  Processing by CategoriesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"name"=>"Bicycle", "html"=>""}, "commit"=>"Update Category", "id"=>"1"}
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE `categories` SET `name` = 'Bicycle', `updated_at` = '2011-01-23 06:31:16' WHERE (`categories`.`id` = 1)[0m
+  [1m[35mSQL (129.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/categories/1
+Completed 302 Found in 144ms
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2011-01-23 00:31:16 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 17ms (Views: 9.5ms | ActiveRecord: 129.7ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 00:31:18 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 21ms (Views: 14.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/5/edit" for 127.0.0.1 at 2011-01-23 00:31:21 -0600
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 5) LIMIT 1[0m
+Rendered categories/_form.html.erb (6.4ms)
+Rendered categories/edit.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 19ms (Views: 12.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/categories/5" for 127.0.0.1 at 2011-01-23 00:31:26 -0600
+  Processing by CategoriesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"name"=>"Accessory", "html"=>""}, "commit"=>"Update Category", "id"=>"5"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 5) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE `categories` SET `name` = 'Accessory', `updated_at` = '2011-01-23 06:31:26' WHERE (`categories`.`id` = 5)
+  [1m[36mSQL (103.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/categories/5
+Completed 302 Found in 119ms
+
+
+Started GET "/categories/5" for 127.0.0.1 at 2011-01-23 00:31:26 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 5) LIMIT 1
+Rendered categories/show.html.erb within layouts/application (40.5ms)
+Completed 200 OK in 51ms (Views: 43.7ms | ActiveRecord: 104.1ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 00:31:28 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 20ms (Views: 14.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/6/edit" for 127.0.0.1 at 2011-01-23 00:31:30 -0600
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 6) LIMIT 1
+Rendered categories/_form.html.erb (7.1ms)
+Rendered categories/edit.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 20ms (Views: 13.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/categories/6" for 127.0.0.1 at 2011-01-23 00:31:34 -0600
+  Processing by CategoriesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"name"=>"Part", "html"=>""}, "commit"=>"Update Category", "id"=>"6"}
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 6) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE `categories` SET `name` = 'Part', `updated_at` = '2011-01-23 06:31:34' WHERE (`categories`.`id` = 6)[0m
+  [1m[35mSQL (134.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/categories/6
+Completed 302 Found in 179ms
+
+
+Started GET "/categories/6" for 127.0.0.1 at 2011-01-23 00:31:34 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 6) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 16ms (Views: 9.4ms | ActiveRecord: 135.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 00:31:35 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 21ms (Views: 15.2ms | ActiveRecord: 0.4ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateCategories (20110123062252)
+Migrating to CreateCategoryLinks (20110123064606)
+  [1m[35mSQL (128.1ms)[0m  CREATE TABLE `category_links` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `category_id` int(11), `parent_id` int(11), `rank` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (53.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110123064606')[0m
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-01-23 01:00:40 -0600
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (5.4ms)
+Rendered categories/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 17ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-01-23 01:00:45 -0600
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"name"=>"Road", "html"=>""}, "commit"=>"Create Category"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  describe `categories`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `categories` (`name`, `html`, `created_at`, `updated_at`) VALUES ('Road', '', '2011-01-23 07:00:45', '2011-01-23 07:00:45')[0m
+  [1m[35mSQL (108.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/categories/8
+Completed 302 Found in 123ms
+
+
+Started GET "/categories/8" for 127.0.0.1 at 2011-01-23 01:00:45 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 8) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (38.8ms)
+Completed 200 OK in 52ms (Views: 41.8ms | ActiveRecord: 109.2ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 01:00:47 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 21ms (Views: 15.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-01-23 01:00:49 -0600
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (5.2ms)
+Rendered categories/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 17ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-01-23 01:00:54 -0600
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"name"=>"MTB", "html"=>""}, "commit"=>"Create Category"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  describe `categories`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `categories` (`name`, `html`, `created_at`, `updated_at`) VALUES ('MTB', '', '2011-01-23 07:00:54', '2011-01-23 07:00:54')[0m
+  [1m[35mSQL (133.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/categories/9
+Completed 302 Found in 150ms
+
+
+Started GET "/categories/9" for 127.0.0.1 at 2011-01-23 01:00:54 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 9) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 17ms (Views: 9.9ms | ActiveRecord: 134.3ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 01:00:56 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.5ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 27ms (Views: 21.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-01-23 01:00:58 -0600
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (5.4ms)
+Rendered categories/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 17ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-01-23 01:01:03 -0600
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"name"=>"Tandem", "html"=>""}, "commit"=>"Create Category"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  describe `categories`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `categories` (`name`, `html`, `created_at`, `updated_at`) VALUES ('Tandem', '', '2011-01-23 07:01:03', '2011-01-23 07:01:03')[0m
+  [1m[35mSQL (102.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/categories/10
+Completed 302 Found in 118ms
+
+
+Started GET "/categories/10" for 127.0.0.1 at 2011-01-23 01:01:03 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 10) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 15ms (Views: 8.9ms | ActiveRecord: 103.8ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 01:01:04 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 23ms (Views: 17.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-01-23 01:01:06 -0600
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (5.5ms)
+Rendered categories/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 17ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-01-23 01:01:10 -0600
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"name"=>"Hybrid", "html"=>""}, "commit"=>"Create Category"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  describe `categories`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `categories` (`name`, `html`, `created_at`, `updated_at`) VALUES ('Hybrid', '', '2011-01-23 07:01:10', '2011-01-23 07:01:10')[0m
+  [1m[35mSQL (127.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/categories/11
+Completed 302 Found in 142ms
+
+
+Started GET "/categories/11" for 127.0.0.1 at 2011-01-23 01:01:10 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 11) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 49ms (Views: 9.5ms | ActiveRecord: 128.3ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 01:01:11 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.5ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 24ms (Views: 17.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-01-23 01:01:13 -0600
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (5.4ms)
+Rendered categories/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 17ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-01-23 01:01:17 -0600
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"name"=>"Comfort", "html"=>""}, "commit"=>"Create Category"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  describe `categories`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `categories` (`name`, `html`, `created_at`, `updated_at`) VALUES ('Comfort', '', '2011-01-23 07:01:17', '2011-01-23 07:01:17')[0m
+  [1m[35mSQL (119.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/categories/12
+Completed 302 Found in 136ms
+
+
+Started GET "/categories/12" for 127.0.0.1 at 2011-01-23 01:01:17 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 12) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 16ms (Views: 9.5ms | ActiveRecord: 120.9ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 01:01:18 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (45.3ms)
+Completed 200 OK in 54ms (Views: 48.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-01-23 01:01:20 -0600
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (5.4ms)
+Rendered categories/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 17ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-01-23 01:01:27 -0600
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"name"=>"Triathlon", "html"=>""}, "commit"=>"Create Category"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  describe `categories`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `categories` (`name`, `html`, `created_at`, `updated_at`) VALUES ('Triathlon', '', '2011-01-23 07:01:27', '2011-01-23 07:01:27')[0m
+  [1m[35mSQL (101.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/categories/13
+Completed 302 Found in 115ms
+
+
+Started GET "/categories/13" for 127.0.0.1 at 2011-01-23 01:01:27 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 13) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 17ms (Views: 9.5ms | ActiveRecord: 102.1ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 01:01:28 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 24ms (Views: 18.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-01-23 01:01:30 -0600
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (5.2ms)
+Rendered categories/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 17ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-01-23 01:01:35 -0600
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"name"=>"Track", "html"=>""}, "commit"=>"Create Category"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  describe `categories`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `categories` (`name`, `html`, `created_at`, `updated_at`) VALUES ('Track', '', '2011-01-23 07:01:35', '2011-01-23 07:01:35')[0m
+  [1m[35mSQL (82.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/categories/14
+Completed 302 Found in 97ms
+
+
+Started GET "/categories/14" for 127.0.0.1 at 2011-01-23 01:01:35 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 14) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 15ms (Views: 8.8ms | ActiveRecord: 83.3ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 01:01:36 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 26ms (Views: 20.3ms | ActiveRecord: 0.4ms)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateCategoryLinks (20110123064606)
+  [1m[35mSQL (115.7ms)[0m  DROP TABLE `category_links`
+  [1m[36mAREL (64.9ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20110123064606'[0m
+Migrating to CreateCategories (20110123062252)
+  [1m[35mSQL (63.4ms)[0m  DROP TABLE `categories`
+  [1m[36mAREL (53.9ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20110123062252'[0m
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateCategories (20110123074936)
+  [1m[35mSQL (190.1ms)[0m  CREATE TABLE `categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11), `name` varchar(255), `html` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (42.8ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110123074936')[0m
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 01:53:46 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 37ms (Views: 5.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-01-23 01:53:50 -0600
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (8.0ms)
+Rendered categories/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 23ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-01-23 01:53:59 -0600
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"parent_id"=>"", "name"=>"Bicycle", "html"=>""}, "commit"=>"Create Category"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `categories`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `categories` (`parent_id`, `name`, `html`, `created_at`, `updated_at`) VALUES (NULL, 'Bicycle', '', '2011-01-23 07:53:59', '2011-01-23 07:53:59')
+  [1m[36mSQL (127.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/categories/1
+Completed 302 Found in 146ms
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2011-01-23 01:53:59 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+Rendered categories/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 50ms (Views: 10.2ms | ActiveRecord: 128.7ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 01:54:02 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 18ms (Views: 10.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-01-23 01:54:06 -0600
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (34.4ms)
+Rendered categories/new.html.erb within layouts/application (37.2ms)
+Completed 200 OK in 48ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-01-23 01:54:14 -0600
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"parent_id"=>"Bicycle", "name"=>"Road", "html"=>""}, "commit"=>"Create Category"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `categories`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `categories` (`parent_id`, `name`, `html`, `created_at`, `updated_at`) VALUES (0, 'Road', '', '2011-01-23 07:54:14', '2011-01-23 07:54:14')
+  [1m[36mSQL (113.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/categories/2
+Completed 302 Found in 130ms
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2011-01-23 01:54:14 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 2) LIMIT 1
+Rendered categories/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 20ms (Views: 10.4ms | ActiveRecord: 114.1ms)
+
+
+Started GET "/categories/2/edit" for 127.0.0.1 at 2011-01-23 01:54:23 -0600
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 2) LIMIT 1[0m
+Rendered categories/_form.html.erb (7.5ms)
+Rendered categories/edit.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 23ms (Views: 13.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/categories/2" for 127.0.0.1 at 2011-01-23 01:54:27 -0600
+  Processing by CategoriesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"parent_id"=>"1", "name"=>"Road", "html"=>""}, "commit"=>"Update Category", "id"=>"2"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 2) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE `categories` SET `parent_id` = 1, `updated_at` = '2011-01-23 07:54:27' WHERE (`categories`.`id` = 2)
+  [1m[36mSQL (97.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/categories/2
+Completed 302 Found in 117ms
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2011-01-23 01:54:27 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 2) LIMIT 1
+Rendered categories/show.html.erb within layouts/application (37.7ms)
+Completed 200 OK in 53ms (Views: 40.8ms | ActiveRecord: 98.7ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 01:54:29 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 25ms (Views: 16.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-01-23 01:54:33 -0600
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (6.2ms)
+Rendered categories/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 20ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-01-23 01:54:39 -0600
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"parent_id"=>"1", "name"=>"MTB", "html"=>""}, "commit"=>"Create Category"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mdescribe `categories`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `categories` (`parent_id`, `name`, `html`, `created_at`, `updated_at`) VALUES (1, 'MTB', '', '2011-01-23 07:54:39', '2011-01-23 07:54:39')
+  [1m[36mSQL (63.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/categories/3
+Completed 302 Found in 83ms
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2011-01-23 01:54:39 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 3) LIMIT 1
+Rendered categories/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 20ms (Views: 10.5ms | ActiveRecord: 64.4ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 01:54:42 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 21ms (Views: 12.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at 2011-01-23 01:54:46 -0600
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+Rendered categories/_form.html.erb (7.6ms)
+Rendered categories/edit.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 23ms (Views: 13.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/categories/1" for 127.0.0.1 at 2011-01-23 01:54:51 -0600
+  Processing by CategoriesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"parent_id"=>"0", "name"=>"Bicycle", "html"=>""}, "commit"=>"Update Category", "id"=>"1"}
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE `categories` SET `parent_id` = 0, `updated_at` = '2011-01-23 07:54:51' WHERE (`categories`.`id` = 1)[0m
+  [1m[35mSQL (101.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/categories/1
+Completed 302 Found in 120ms
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2011-01-23 01:54:51 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 20ms (Views: 10.1ms | ActiveRecord: 102.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 01:54:53 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 20ms (Views: 11.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-01-23 01:54:55 -0600
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (6.3ms)
+Rendered categories/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 21ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-01-23 01:55:04 -0600
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"parent_id"=>"0", "name"=>"Clothing", "html"=>""}, "commit"=>"Create Category"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  describe `categories`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `categories` (`parent_id`, `name`, `html`, `created_at`, `updated_at`) VALUES (0, 'Clothing', '', '2011-01-23 07:55:04', '2011-01-23 07:55:04')[0m
+  [1m[35mSQL (114.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/categories/4
+Completed 302 Found in 137ms
+
+
+Started GET "/categories/4" for 127.0.0.1 at 2011-01-23 01:55:04 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 4) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (38.2ms)
+Completed 200 OK in 51ms (Views: 41.3ms | ActiveRecord: 115.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 01:55:06 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 21ms (Views: 13.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-01-23 01:55:08 -0600
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (10.6ms)
+Rendered categories/new.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 29ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-01-23 01:55:16 -0600
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"parent_id"=>"0", "name"=>"Accessory", "html"=>""}, "commit"=>"Create Category"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  describe `categories`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `categories` (`parent_id`, `name`, `html`, `created_at`, `updated_at`) VALUES (0, 'Accessory', '', '2011-01-23 07:55:17', '2011-01-23 07:55:17')[0m
+  [1m[35mSQL (65.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/categories/5
+Completed 302 Found in 94ms
+
+
+Started GET "/categories/5" for 127.0.0.1 at 2011-01-23 01:55:17 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 5) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 24ms (Views: 13.6ms | ActiveRecord: 66.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 01:55:21 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 23ms (Views: 13.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-01-23 01:55:23 -0600
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (6.2ms)
+Rendered categories/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 20ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-01-23 01:55:31 -0600
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"parent_id"=>"0", "name"=>"Part", "html"=>""}, "commit"=>"Create Category"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  describe `categories`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `categories` (`parent_id`, `name`, `html`, `created_at`, `updated_at`) VALUES (0, 'Part', '', '2011-01-23 07:55:31', '2011-01-23 07:55:31')[0m
+  [1m[35mSQL (126.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/categories/6
+Completed 302 Found in 145ms
+
+
+Started GET "/categories/6" for 127.0.0.1 at 2011-01-23 01:55:31 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 6) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 28ms (Views: 18.0ms | ActiveRecord: 127.8ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 01:55:33 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 23ms (Views: 14.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-01-23 01:55:35 -0600
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (6.3ms)
+Rendered categories/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 21ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-01-23 01:55:41 -0600
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"parent_id"=>"0", "name"=>"Service", "html"=>""}, "commit"=>"Create Category"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  describe `categories`
+  [1m[36mAREL (83.7ms)[0m  [1mINSERT INTO `categories` (`parent_id`, `name`, `html`, `created_at`, `updated_at`) VALUES (0, 'Service', '', '2011-01-23 07:55:41', '2011-01-23 07:55:41')[0m
+  [1m[35mSQL (87.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/categories/7
+Completed 302 Found in 188ms
+
+
+Started GET "/categories/7" for 127.0.0.1 at 2011-01-23 01:55:41 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 7) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 51ms (Views: 41.4ms | ActiveRecord: 171.9ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 01:55:43 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 24ms (Views: 15.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-01-23 01:55:50 -0600
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (6.2ms)
+Rendered categories/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 20ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-01-23 01:55:57 -0600
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"parent_id"=>"0", "name"=>"Juvenile", "html"=>""}, "commit"=>"Create Category"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  describe `categories`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `categories` (`parent_id`, `name`, `html`, `created_at`, `updated_at`) VALUES (0, 'Juvenile', '', '2011-01-23 07:55:57', '2011-01-23 07:55:57')[0m
+  [1m[35mSQL (93.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/categories/8
+Completed 302 Found in 112ms
+
+
+Started GET "/categories/8" for 127.0.0.1 at 2011-01-23 01:55:57 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 8) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 25ms (Views: 14.9ms | ActiveRecord: 94.6ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 01:56:00 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 28ms (Views: 17.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-01-23 01:56:08 -0600
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (6.1ms)
+Rendered categories/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 20ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-01-23 01:56:16 -0600
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Z0BAUEaOtLBdIMAL5mPQ6owyolF82/KlawpfhA9+zw=", "category"=>{"parent_id"=>"1", "name"=>"Tandem", "html"=>""}, "commit"=>"Create Category"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  describe `categories`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `categories` (`parent_id`, `name`, `html`, `created_at`, `updated_at`) VALUES (1, 'Tandem', '', '2011-01-23 07:56:16', '2011-01-23 07:56:16')[0m
+  [1m[35mSQL (86.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/categories/9
+Completed 302 Found in 135ms
+
+
+Started GET "/categories/9" for 127.0.0.1 at 2011-01-23 01:56:16 -0600
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 9) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 20ms (Views: 10.3ms | ActiveRecord: 87.8ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 01:56:17 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.5ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 26ms (Views: 17.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 01:57:38 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 0) LIMIT 1
+Rendered categories/index.html.erb within layouts/application (6.5ms)
+Completed   in 18ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    12: 
+    13: <% @categories.each do |category| %>
+    14:   <tr>
+    15:     <td><%= category.parent.name %></td>
+    16:     <td><%= category.name %></td>
+    17:     <td><%= category.html %></td>
+    18:     <td><%= link_to 'Show', category %></td>
+  app/views/categories/index.html.erb:15:in `block in _app_views_categories_index_html_erb__3737664539197570424_39064400__3110301400581430576'
+  app/views/categories/index.html.erb:13:in `each'
+  app/views/categories/index.html.erb:13:in `_app_views_categories_index_html_erb__3737664539197570424_39064400__3110301400581430576'
+  app/controllers/categories_controller.rb:7:in `index'
+
+Rendered /home/davidp/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/davidp/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.9ms)
+Rendered /home/davidp/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.9ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 01:58:02 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 0) LIMIT 1
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 0) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 0) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 0) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 0) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 0) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+Rendered categories/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 33ms (Views: 24.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 01:59:25 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 0) LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 0) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 0) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 0) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 0) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 0) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+Rendered categories/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 33ms (Views: 24.7ms | ActiveRecord: 0.3ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (26.8ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateCategories (20110123074936)
+Migrating to AddRank (20110124021209)
+  [1m[35mSQL (334.4ms)[0m  ALTER TABLE `categories` ADD `rank` int(11) DEFAULT 1
+  [1m[36mSQL (97.6ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110124021209')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-23 20:14:57 -0600
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-23 20:15:09 -0600
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-01-23 20:15:15 -0600
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 0) LIMIT 1[0m
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 0) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 0) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 0) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 0) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 0) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+Rendered categories/index.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 155ms (Views: 28.5ms | ActiveRecord: 1.5ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (15.9ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to AddRank (20110124021209)
+  [1m[35mSQL (312.1ms)[0m  ALTER TABLE `categories` DROP `rank`
+  [1m[36mAREL (53.5ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20110124021209'[0m

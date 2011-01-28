@@ -56,17 +56,31 @@ class CategoriesController < ApplicationController
   # PUT /categories/1
   # PUT /categories/1.xml
   def update
+
     @category = Category.find(params[:id])
 
-    respond_to do |format|
-      if @category.update_attributes(params[:category])
-        format.html { redirect_to(@category, :notice => 'Category was successfully updated.') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @category.errors, :status => :unprocessable_entity }
-      end
-    end
+		if params[:move]
+			if params[:move] == 'up' and @category.left_sibling
+				@left = @category.left_sibling
+				@category.move_left
+				redirect_to(categories_url, :notice => "Left sibling was " + @left.name)
+			elsif params[:move] == 'down' and @category.right_sibling
+				@category.move_right
+				redirect_to(categories_url)
+			else
+				redirect_to(categories_url)
+			end
+		else
+			respond_to do |format|
+				if @category.update_attributes(params[:category])
+					format.html { redirect_to(@category, :notice => 'Category was successfully updated.') }
+					format.xml  { head :ok }
+				else
+					format.html { render :action => "edit" }
+					format.xml  { render :xml => @category.errors, :status => :unprocessable_entity }
+				end
+			end
+		end
   end
 
   # DELETE /categories/1

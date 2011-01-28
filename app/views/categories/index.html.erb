@@ -1,29 +1,35 @@
 <h1>Listing categories</h1>
 
+<p id="notice"><%= notice %></p>
+
 <table>
   <tr>
     <th>Name</th>
-    <th>Parent</th>
-    <th>Lft</th>
-    <th>Rgt</th>
-    <th>Depth</th>
     <th>Html</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Action</th>
   </tr>
 
 <% @categories.each do |category| %>
   <tr>
-    <td><%= raw ("&nbsp;" * ((category.depth || 0) * 2)) %><%= category.name %></td>
-    <td><%= category.parent_id %></td>
-    <td><%= category.lft %></td>
-    <td><%= category.rgt %></td>
-    <td><%= category.depth %></td>
-    <td><%= category.html %></td>
-    <td><%= link_to 'Show', category %></td>
-    <td><%= link_to 'Edit', edit_category_path(category) %></td>
-    <td><%= link_to 'Destroy', category, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= raw ("&nbsp;" * ((category.depth || 0) * 2)) %><%= link_to category.name, category %></td>
+    <td><%= raw (category.html) %></td>
+		<td>
+			<%= form_tag category_path(category), { :method => 'put', :style => 'display:inline' } do -%>
+				<%= hidden_field_tag 'move', 'up' %>
+				<%= image_submit_tag 'arrow-up.gif', :alt => 'Move up' %>
+			<% end -%>
+			<%= form_tag category_path(category), { :method => 'put', :style => 'display:inline' } do -%>
+				<%= hidden_field_tag 'move', 'down' %>
+				<%= image_submit_tag 'arrow-down.gif', :alt => 'Move down' %>
+			<% end -%>
+			&nbsp;
+			<%= link_to edit_category_path(category) do -%>
+				<%= image_tag 'pencil.gif' %>
+			<% end -%>
+			<%= link_to(category, :confirm => 'Are you sure?', :method => :delete) do -%>
+				<%= image_tag 'x-red.gif' %>
+			<% end -%>
+		</td>
   </tr>
 <% end %>
 </table>

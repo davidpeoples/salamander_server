@@ -24,7 +24,8 @@ gem 'nokogiri'
 # gem 'aws-s3', :require => 'aws/s3'
 
 gem 'mysql2'
-gem 'awesome_nested_set', :git => 'http://github.com/galetahub/awesome_nested_set.git'
+#gem 'awesome_nested_set', :git => 'http://github.com/galetahub/awesome_nested_set.git'
+gem 'moretea-awesome_nested_set', :git => 'git://github.com/moretea/awesome_nested_set.git'
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators

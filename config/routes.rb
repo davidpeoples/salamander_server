@@ -2,10 +2,6 @@ SalamanderServer::Application.routes.draw do
 
   resources :categories
 
-  resources :categories do
-		resources :category_links
-	end
-
 	root :to => "home#index"
 
   #get "home/index"

@@ -25,7 +25,7 @@ gem 'rails', '3.0.3'
 
 gem 'mysql2'
 #gem 'awesome_nested_set', :git => 'http://github.com/galetahub/awesome_nested_set.git'
-gem 'moretea-awesome_nested_set', :git => 'git://github.com/moretea/awesome_nested_set.git'
+#gem 'moretea-awesome_nested_set', :git => 'git://github.com/moretea/awesome_nested_set.git'
 
 group :development do
 	# gem 'rspec-rails', '2.3.0'

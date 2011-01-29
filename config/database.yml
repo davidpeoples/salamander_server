@@ -6,7 +6,7 @@ development:
   database: salamander_dev
   pool: 5
   username: salamander_user
-  password: ":8ge]}kTK~)lO%*I"
+  password: "8gekTKlOI"
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -17,7 +17,7 @@ test:
   database: salamander_test
   pool: 5
   username: salamander_user
-  password: ":8ge]}kTK~)lO%*I"
+  password: "8gekTKlOI"
 
 production:
   adapter: mysql2
@@ -25,4 +25,4 @@ production:
   database: salamander_production
   pool: 5
   username: salamander_user
-  password: ":8ge]}kTK~)lO%*I"
+  password: "8gekTKlOI"

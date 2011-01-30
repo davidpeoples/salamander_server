@@ -1,11 +1,13 @@
 class ProductsController < ApplicationController
   def index
+		@title = "Products"
   end
 
   def show
   end
 
   def new
+		@title = "New Product"
   end
 
   def edit

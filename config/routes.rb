@@ -1,24 +1,12 @@
 SalamanderServer::Application.routes.draw do
 
-  get "products/index"
-
-  get "products/show"
-
-  get "products/new"
-
-  get "products/edit"
-
-  get "products/create"
-
-  get "products/update"
-
-  get "products/destroy"
-
 	match '/contact', :to => 'pages#contact'
 	match '/about',   :to => 'pages#about'
 	match '/help',    :to => 'pages#help'
 
   resources :categories
+
+	resources :products
 
 	root :to => "pages#home"
 

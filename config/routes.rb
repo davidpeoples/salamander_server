@@ -1,5 +1,9 @@
 SalamanderServer::Application.routes.draw do
 
+  get "pages/home"
+
+  get "pages/contact"
+
   resources :categories
 
 	root :to => "home#index"

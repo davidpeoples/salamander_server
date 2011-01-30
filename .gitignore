@@ -5,4 +5,6 @@ lib/*
 nbproject/private/*
 public/stylesheets/.gitkeep
 log/development.log
+log/test.log
+log/production.log
 

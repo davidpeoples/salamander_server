@@ -63,7 +63,7 @@ class CategoriesController < ApplicationController
 			if params[:move] == 'up' and @category.left_sibling
 				@left = @category.left_sibling
 				@category.move_left
-				redirect_to(categories_url, :notice => "Left sibling was " + @left.name)
+				redirect_to(categories_url)
 			elsif params[:move] == 'down' and @category.right_sibling
 				@category.move_right
 				redirect_to(categories_url)

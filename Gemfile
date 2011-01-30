@@ -28,13 +28,13 @@ gem 'mysql2'
 #gem 'moretea-awesome_nested_set', :git => 'git://github.com/moretea/awesome_nested_set.git'
 
 group :development do
-	# gem 'rspec-rails', '2.3.0'
+	gem 'rspec-rails', '2.3.0'
 	# gem 'ruby-debug19'
 end
 
 group :test do
-	# gem 'rspec', '2.3.0'
-	# gem 'webrat', '0.7.1'
+	gem 'rspec', '2.3.0'
+	gem 'webrat', '0.7.1'
 end
 
 # Bundle gems for the local environment. Make sure to

@@ -1,5 +1,29 @@
+# == Schema Information
+# Schema version: 20110131014128
+#
+# Table name: categories
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(255)
+#  parent_id  :integer(4)
+#  lft        :integer(4)
+#  rgt        :integer(4)
+#  depth      :integer(4)
+#  html       :text
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 class Category < ActiveRecord::Base
 	acts_as_nested_set
+
+	has_many :products
+
+	attr_accessible :name, :html
+
+	validates :name,	:presence => true,
+										:length => { :maximum => 50 },
+										:uniqueness => { :case_sensitive => false, :scope => :parent_id }
 
 	def full_name
 		category_tree = []

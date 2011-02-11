@@ -28,17 +28,22 @@ gem 'mysql2'
 #gem 'moretea-awesome_nested_set', :git => 'git://github.com/moretea/awesome_nested_set.git'
 
 group :development do
-	gem 'rspec-rails', '2.3.0'
+	gem 'rspec-rails', '>= 2.5.0'
 	# gem 'ruby-debug19'
 	gem 'annotate-models'
+  gem 'ZenTest'
 end
 
 group :test do
-	gem 'rspec', '2.3.0'
+	gem 'rspec', '>=2.5.0'
+  gem 'rspec-rails', '>= 2.5.0'
 	gem 'webrat', '0.7.1'
 	gem 'spork'
 	gem 'guard-spork'
 	gem 'libnotify'
+  gem 'factory_girl_rails', '1.0'
+  gem 'ZenTest'
+  gem 'autotest-notification'
 end
 
 # Bundle gems for the local environment. Make sure to

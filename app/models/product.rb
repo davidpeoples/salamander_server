@@ -22,6 +22,7 @@ class Product < ActiveRecord::Base
 
 	validates :name,	:presence => true,
 										:length => { :maximum => 50 }
+  validates_uniqueness_of :name, :scope => :category_id
 	validates_associated :category
 	validates_presence_of :category
 	

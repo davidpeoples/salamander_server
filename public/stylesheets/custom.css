@@ -93,3 +93,17 @@ tbody tr:nth-child(even) td, tbody tr.even td {
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 }
+
+.label {
+    display: inline-block;
+    width: 100px;
+    max-width: 100px;
+}
+
+.label:after {
+    content: ":"
+}
+
+.value {
+    font-weight: bold;
+}

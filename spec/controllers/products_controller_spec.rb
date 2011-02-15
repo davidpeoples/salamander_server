@@ -18,29 +18,40 @@ describe ProductsController do
 			response.should have_selector("title",
 																		:content => @base_title + "Products")
 		end
-		
+
   end
 
-#  describe "GET 'show'" do
-#    it "should be successful" do
-#      get 'show'
-#      response.should be_success
-#    end
-#  end
+  describe "GET 'show'" do
 
-  describe "GET 'new'" do
+    before(:each) do
+      @product = Factory(:product)
+    end
+
     it "should be successful" do
-      get 'new'
+      get :show, :id => @product
       response.should be_success
     end
 
-		it "should have the right title" do
-			get 'new'
-			response.should have_selector("title",
-																		:content => @base_title + "New Product")
-		end
+    it "should find the right product" do
+      get :show, :id => @product
+      assigns(:product).should == @product
+    end
 
   end
+
+#  describe "GET 'new'" do
+#    it "should be successful" do
+#      get 'new'
+#      response.should be_success
+#    end
+#
+#		it "should have the right title" do
+#			get 'new'
+#			response.should have_selector("title",
+#																		:content => @base_title + "New Product")
+#		end
+#
+#  end
 
 #  describe "GET 'edit'" do
 #    it "should be successful" do

@@ -5,8 +5,8 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @title = "Product"
     @product = Product.find(params[:id])
+    @title = "Product \"" + @product.name + "\""
   end
 
   def new

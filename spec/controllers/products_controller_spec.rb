@@ -65,7 +65,8 @@ describe ProductsController do
     describe "failure" do
 
       before(:each) do
-        @attr = { :name => "" }
+        @category = Factory(:category)
+        @attr = { :name => "", :category_id => @category.id }
       end
 
       it "should not create a product" do
@@ -87,6 +88,27 @@ describe ProductsController do
     end
 
     describe "success" do
+
+      before(:each) do
+        @category = Factory(:category)
+        @attr = { :name => "New product", :category_id => @category.id }
+      end
+
+      it "should create a product" do
+        lambda do
+          post :create, :product => @attr
+        end.should change(Product, :count).by(1)
+      end
+
+      it "should redirect to the products page" do
+        post :create, :product => @attr
+        response.should redirect_to(products_path)
+      end
+
+      it "should have a flash message" do
+        post :create, :product => @attr
+        flash[:success].should =~ /product was successfully created/i
+      end
 
 #      it "should be successful" do
 #        get 'create'

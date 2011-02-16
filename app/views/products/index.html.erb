@@ -1,7 +1,5 @@
 <h1>Listing products</h1>
 
-<p id="notice"><%= notice %></p>
-
 <table>
   <tr>
     <th>Category</th>
@@ -12,7 +10,7 @@
 
 <% @products.each do |product| %>
   <tr>
-    <td><%= link_to product.category.name, product.category %></td>
+    <td><%= link_to product.category.full_name, product.category %></td>
     <td><%= link_to product.name, product %></td>
     <td><%= product.default_price %></td>
     <td>

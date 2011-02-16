@@ -54,6 +54,10 @@ class Category < ActiveRecord::Base
 			}
 			valid_parents
 		end
-	end
+  end
+
+  def Category.all_in_order
+    self.all(:order => "lft")
+  end
 
 end

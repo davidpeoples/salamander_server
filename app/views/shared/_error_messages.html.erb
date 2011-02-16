@@ -1,0 +1,14 @@
+<% if @product.errors.any? %>
+  <div id="errors_explanation">
+    <h2>
+      <%= pluralize(@product.errors.count, "error")  %>
+      prohibited this product from being saved:
+    </h2>
+    <p>There were problems with the following fields:</p>
+    <ul>
+    <% @product.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>

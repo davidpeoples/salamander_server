@@ -39,19 +39,19 @@ describe ProductsController do
 
   end
 
-#  describe "GET 'new'" do
-#    it "should be successful" do
-#      get 'new'
-#      response.should be_success
-#    end
-#
-#		it "should have the right title" do
-#			get 'new'
-#			response.should have_selector("title",
-#																		:content => @base_title + "New Product")
-#		end
-#
-#  end
+  describe "GET 'new'" do
+    it "should be successful" do
+      get 'new'
+      response.should be_success
+    end
+
+		it "should have the right title" do
+			get 'new'
+			response.should have_selector("title",
+																		:content => @base_title + "New Product")
+		end
+
+  end
 
 #  describe "GET 'edit'" do
 #    it "should be successful" do
@@ -60,11 +60,41 @@ describe ProductsController do
 #    end
 #  end
 
-  describe "GET 'create'" do
-    it "should be successful" do
-      get 'create'
-      response.should be_success
+  describe "POST 'create'" do
+
+    describe "failure" do
+
+      before(:each) do
+        @attr = { :name => "" }
+      end
+
+      it "should not create a product" do
+        lambda do
+          post :create, :product => @attr
+        end.should_not change(Product, :count)
+      end
+
+      it "should have the right title" do
+        post :create, :product => @attr
+        response.should have_selector("title", :content => "New Product")
+      end
+
+      it "should render the 'new' page" do
+        post :create, :product => @attr
+        response.should render_template('new')
+      end
+
     end
+
+    describe "success" do
+
+#      it "should be successful" do
+#        get 'create'
+#        response.should be_success
+#      end
+      
+    end
+
   end
 
 #  describe "GET 'update'" do

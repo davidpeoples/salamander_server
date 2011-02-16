@@ -11,12 +11,20 @@ class ProductsController < ApplicationController
 
   def new
 		@title = "New Product"
+    @product = Product.new
   end
 
   def edit
   end
 
   def create
+    @product = Product.new(params[:product])
+    if @product.save
+      # handle success
+    else
+      @title = "New Product"
+      render 'new'
+    end
   end
 
   def update
